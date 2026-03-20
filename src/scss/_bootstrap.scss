@@ -1,0 +1,24 @@
+@use "./tokens" as gld;
+
+@forward "pkg:bootstrap/scss/bootstrap" with (
+  $primary: gld.$kleur-corporate1,
+  $link-color: gld.$kleur-corporate1,
+  $color-mode-type: gld.$color-mode-type,
+  $body-bg-dark: gld.$body-bg-dark,
+  $font-family-sans-serif: (
+    "Poppins",
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial,
+    "Noto Sans",
+    "Liberation Sans",
+    sans-serif,
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol",
+    "Noto Color Emoji",
+  )
+);

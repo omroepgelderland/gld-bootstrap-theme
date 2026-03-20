@@ -1,0 +1,9 @@
+@use "./tokens" as gld;
+
+.gld-gradient {
+  background: linear-gradient(
+    45deg,
+    gld.$kleur-corporate2,
+    gld.$kleur-corporate1
+  );
+}

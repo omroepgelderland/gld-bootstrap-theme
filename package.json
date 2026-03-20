@@ -1,0 +1,48 @@
+{
+  "name": "@gld/bootstrap-theme",
+  "version": "0.1.0",
+  "description": "Bootstrap 5 theme for the 2026 Omroep Gelderland branding",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omroepgelderland/gld-bootstrap-theme.git"
+  },
+  "bugs": {
+    "url": "https://github.com/omroepgelderland/gld-bootstrap-theme/issues"
+  },
+  "license": "MIT",
+  "author": "Remy Glaser <rglaser@gld.nl>",
+  "type": "module",
+  "main": "dist/theme.css",
+  "style": "dist/theme.css",
+  "sass": "src/scss/theme.scss",
+  "exports": {
+    ".": {
+      "sass": "./src/scss/theme.scss",
+      "default": "./dist/theme.css"
+    },
+    "./theme": {
+      "sass": "./src/scss/theme.scss",
+      "default": "./dist/theme.css"
+    },
+    "./tokens": "./src/scss/_gld-tokens.scss"
+  },
+  "files": [
+    "dist",
+    "src/scss"
+  ],
+  "sideEffects": [
+    "*.css",
+    "*.scss"
+  ],
+  "peerDependencies": {
+    "bootstrap": "^5.3.0"
+  },
+  "devDependencies": {
+    "bootstrap": "^5.3.0",
+    "prettier": "^3.8.1",
+    "sass": "^1.98.0"
+  },
+  "dependencies": {
+    "@fontsource/poppins": "^5.0.0"
+  }
+}
