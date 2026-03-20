@@ -17,17 +17,14 @@
   "type": "module",
   "main": "dist/theme.css",
   "style": "dist/theme.css",
-  "sass": "src/scss/theme.scss",
+  "sass": "src/scss/index.scss",
   "exports": {
     ".": {
-      "sass": "./src/scss/theme.scss",
+      "sass": "./src/scss/index.scss",
       "default": "./dist/theme.css"
     },
-    "./theme": {
-      "sass": "./src/scss/theme.scss",
-      "default": "./dist/theme.css"
-    },
-    "./tokens": "./src/scss/_gld-tokens.scss"
+    "./bootstrap": "./src/scss/_bootstrap.scss",
+    "./tokens": "./src/scss/_tokens.scss"
   },
   "files": [
     "dist",

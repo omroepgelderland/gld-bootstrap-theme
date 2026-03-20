@@ -29,13 +29,13 @@ npx sass \
     --pkg-importer=node \
     --style=expanded \
     --quiet-deps \
-    src/scss/theme.scss \
+    src/scss/index.scss \
     dist/theme.css
 npx sass \
     --pkg-importer=node \
     --no-source-map \
     --style=compressed \
     --quiet-deps \
-    src/scss/theme.scss \
+    src/scss/index.scss \
     dist/theme.min.css
 git ls-files -z | grep -zP '\.(ts|js|css|scss|html|json)$' | xargs -0 npx prettier --write

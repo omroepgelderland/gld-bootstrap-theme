@@ -21,18 +21,12 @@ npm install @omroepgelderland/bootstrap-theme bootstrap
 import "@omroepgelderland/bootstrap-theme";
 ```
 
-or:
-
-```js
-import "@omroepgelderland/bootstrap-theme/theme";
-```
-
 ### Use SCSS (advanced)
 
 If your project uses Sass:
 
 ```scss
-@use "@omroepgelderland/bootstrap-theme/theme";
+@use "@omroepgelderland/bootstrap-theme";
 ```
 
 ### Use design tokens
@@ -40,10 +34,13 @@ If your project uses Sass:
 You can reuse the tokens in your own SCSS:
 
 ```scss
+@use "@omroepgelderland/bootstrap-theme";          // CSS output
+@use "@omroepgelderland/bootstrap-theme/bootstrap" as bs;
 @use "@omroepgelderland/bootstrap-theme/tokens" as gld;
 
 .example {
-  color: gld.$kleur-corporate1;
+  color: bs.$success;
+  background: gld.$kleur-corporate1;
 }
 ```
 
