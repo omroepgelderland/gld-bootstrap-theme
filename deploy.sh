@@ -6,7 +6,7 @@ projectdir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 cd "$projectdir"
 
 current_branch=$(git rev-parse --abbrev-ref HEAD)
-if [[ $current_branch != "heads/master" ]]; then
+if [[ $current_branch != "master" ]]; then
     echo "Op branch $current_branch ipv master. Toch doorgaan? (j/n)"
     read -r ans
     if [[ $ans != "j" ]]; then
