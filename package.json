@@ -1,5 +1,5 @@
 {
-  "name": "@gld/bootstrap-theme",
+  "name": "@omroepgelderland/bootstrap-theme",
   "publishConfig": {
     "access": "public"
   },

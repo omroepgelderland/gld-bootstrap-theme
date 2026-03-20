@@ -1,4 +1,4 @@
-# @gld/bootstrap-theme
+# @omroepgelderland/bootstrap-theme
 
 Bootstrap 5 theme for the 2026 Omroep Gelderland branding.
 
@@ -10,7 +10,7 @@ This package provides a customized Bootstrap build with:
 ## Installation
 
 ```bash
-npm install @gld/bootstrap-theme bootstrap
+npm install @omroepgelderland/bootstrap-theme bootstrap
 ```
 
 ## Usage
@@ -18,13 +18,13 @@ npm install @gld/bootstrap-theme bootstrap
 ### Use prebuilt CSS (recommended)
 
 ```js
-import "@gld/bootstrap-theme";
+import "@omroepgelderland/bootstrap-theme";
 ```
 
 or:
 
 ```js
-import "@gld/bootstrap-theme/theme";
+import "@omroepgelderland/bootstrap-theme/theme";
 ```
 
 ### Use SCSS (advanced)
@@ -32,7 +32,7 @@ import "@gld/bootstrap-theme/theme";
 If your project uses Sass:
 
 ```scss
-@use "@gld/bootstrap-theme/theme";
+@use "@omroepgelderland/bootstrap-theme/theme";
 ```
 
 ### Use design tokens
@@ -40,7 +40,7 @@ If your project uses Sass:
 You can reuse the tokens in your own SCSS:
 
 ```scss
-@use "@gld/bootstrap-theme/tokens" as gld;
+@use "@omroepgelderland/bootstrap-theme/tokens" as gld;
 
 .example {
   color: gld.$kleur-corporate1;
