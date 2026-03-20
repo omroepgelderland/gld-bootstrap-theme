@@ -23,6 +23,8 @@
       "sass": "./src/scss/index.scss",
       "default": "./dist/theme.css"
     },
+    "./css": "./dist/theme.css",
+    "./scss": "./src/scss/index.scss",
     "./bootstrap": "./src/scss/_bootstrap.scss",
     "./tokens": "./src/scss/_tokens.scss"
   },

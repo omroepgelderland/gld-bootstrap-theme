@@ -56,7 +56,7 @@ else
     npm publish --tag "$preid"
 fi
 
-git tag "$git_versie"
+git tag "$git_versie" || :
 git gc
 git push origin
 git push origin "$git_versie"
