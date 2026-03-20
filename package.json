@@ -1,5 +1,8 @@
 {
   "name": "@gld/bootstrap-theme",
+  "publishConfig": {
+    "access": "public"
+  },
   "version": "0.1.0",
   "description": "Bootstrap 5 theme for the 2026 Omroep Gelderland branding",
   "repository": {

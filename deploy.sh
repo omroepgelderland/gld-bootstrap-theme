@@ -31,23 +31,32 @@ fi
 nvm install node
 
 # versieverhoging
-oude_versie="$(git tag --list 'v*' --sort=v:refname | tail -n1)"
-echo "De vorige versie is $oude_versie. Versieverhoging? (major|minor|patch|premajor|preminor|prepatch|prerelease) "
-read -r versie_type
-if [[ $versie_type == pre* ]]; then
-    echo "Release? (alpha|beta|rc)"
-    read -r preid
+oude_versie="$(npm pkg get version | tr -d '"')"
+preid=""
+if [[ -z $oude_versie ]]; then
+    npm version "0.1.0"
 else
-    preid=""
+    echo "De vorige versie is $oude_versie. Versieverhoging? (major|minor|patch|premajor|preminor|prepatch|prerelease) "
+    read -r versie_type
+    if [[ $versie_type == pre* ]]; then
+        echo "Release? (alpha|beta|rc)"
+        read -r preid
+        npm version --preid "$preid" "$versie_type"
+    else
+        npm version "$versie_type"
+    fi
 fi
-npm version --preid "$preid" "$versie_type"
+nieuwe_versie="$(npm pkg get version | tr -d '"')"
+git_versie="v$nieuwe_versie"
 
 # package maken
-if [[ $preid == "" ]]; then
+if [[ -z $preid ]]; then
     npm publish
 else
     npm publish --tag "$preid"
 fi
 
+git tag "$git_versie"
 git gc
 git push origin
+git push origin "$git_versie"
