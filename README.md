@@ -62,6 +62,37 @@ GLD tokens en de standaard Bootstrap tokens worden geëxporteerd zodat je ze in 
 }
 ```
 
+#### Webpack
+
+Gebruik de volgende opties in sass-loader.
+
+Dit is alleen nodig als je SCSS importeert. Als je alleen de compiled CSS gebruikt is dit niet nodig.
+
+```ts
+import * as sass from "sass";
+
+const config: webpack.Configuration = {
+  module: {
+    rules: [
+      {
+        test: /\.s[ac]ss$/i,
+        use: [
+          {
+            loader: "sass-loader",
+            options: {
+              implementation: sass,
+              sassOptions: {
+                importers: [new sass.NodePackageImporter()],
+              },
+            },
+          },
+        ],
+      },
+    ],
+  },
+};
+```
+
 ## Ontwikkeling
 
 ### Build CSS
