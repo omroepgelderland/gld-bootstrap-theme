@@ -56,7 +56,9 @@ else
     npm publish --tag "$preid"
 fi
 
-git tag "$git_versie" || :
+if ! git rev-parse -q --verify "refs/tags/$git_versie" >/dev/null; then
+  git tag "$git_versie"
+fi
 git gc
 git push origin
 git push origin "$git_versie"
