@@ -1,40 +1,58 @@
 # @omroepgelderland/bootstrap-theme
 
-Bootstrap 5 theme for the 2026 Omroep Gelderland branding.
+Bootstrap 5 theme voor de 2026 Omroep Gelderland huisstijl.
 
-This package provides a customized Bootstrap build with:
+Dit pakket bevat een customized Bootstrap build met:
 
-- GLD brand colors and tokens
-- Poppins as the default font (via `@fontsource`)
+- GLD huisstijl kleuren
+- Poppins lettertype (via [fontsource](https://www.npmjs.com/package/@fontsource/poppins))
 
-## Installation
+## Installatie
 
 ```bash
 npm install @omroepgelderland/bootstrap-theme bootstrap
 ```
 
-## Usage
+## Gebruik
 
-### Use prebuilt CSS (recommended)
+### Gebruik compiled CSS
 
 ```js
 import "@omroepgelderland/bootstrap-theme";
 ```
 
-### Use SCSS (advanced)
+Of expliciet:
 
-If your project uses Sass:
+```js
+import "@omroepgelderland/bootstrap-theme/css";
+```
+
+### Gebruik SCSS
+
+Als je SASS gebruikt in je project:
 
 ```scss
 @use "@omroepgelderland/bootstrap-theme";
 ```
 
-### Use design tokens
-
-You can reuse the tokens in your own SCSS:
+Of expliciet:
 
 ```scss
-@use "@omroepgelderland/bootstrap-theme";          // CSS output
+@use "@omroepgelderland/bootstrap-theme/scss";
+```
+
+### Gebruik compiled CSS in SCSS
+
+```scss
+@use "@omroepgelderland/bootstrap-theme/css";
+```
+
+### Gebruik SCSS tokens
+
+GLD tokens en de standaard Bootstrap tokens worden geëxporteerd zodat je ze in je project kunt hergebruiken:
+
+```scss
+@use "@omroepgelderland/bootstrap-theme";
 @use "@omroepgelderland/bootstrap-theme/bootstrap" as bs;
 @use "@omroepgelderland/bootstrap-theme/tokens" as gld;
 
@@ -44,7 +62,7 @@ You can reuse the tokens in your own SCSS:
 }
 ```
 
-## Development
+## Ontwikkeling
 
 ### Build CSS
 
@@ -52,7 +70,7 @@ You can reuse the tokens in your own SCSS:
 ./deploy_dev.sh
 ```
 
-### Publish new package
+### Pakket publiceren
 
 ```bash
 ./deploy.sh
