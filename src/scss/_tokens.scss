@@ -1,25 +1,29 @@
 $kleur-blauw: #0000ff;
 $kleur-groen: #00ff00;
 $kleur-geel: #fcc200;
+$kleur-zwart: #000000;
 
 // blauwladder
+$kleur-blauw-1: $kleur-blauw;
 $kleur-blauw-2: #4040ff;
 $kleur-blauw-3: #7f7fff;
 $kleur-blauw-4: #bebfff;
 
 // groenladder
+$kleur-groen-1: $kleur-groen;
 $kleur-groen-2: #40ff40;
 $kleur-groen-3: #7fff7f;
 $kleur-groen-4: #bfffbf;
 
 // geelladder
+$kleur-geel-1: $kleur-geel;
 $kleur-geel-2: #fcd140;
 $kleur-geel-3: #fce080;
 $kleur-geel-4: #fdf0bf;
 
 // zwartladder
-$kleur-zwart-1: #000000;
-$kleur-zwart-2: #868686;
+$kleur-zwart-1: $kleur-zwart;
+$kleur-zwart-2: #565656;
 $kleur-zwart-3: #8e8e8e;
 $kleur-zwart-4: #c6c6c6;
 
